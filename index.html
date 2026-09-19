@@ -96,7 +96,7 @@
     </svg>
 
     <!-- Header -->
-    <header class="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
+    <header id="site-header" class="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
         <a href="#inicio" class="flex items-center gap-2 font-display text-lg font-semibold text-foreground">
           <span class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-on-primary">
@@ -106,10 +106,10 @@
         </a>
 
         <nav aria-label="Navegación principal" class="hidden items-center gap-8 md:flex">
-          <a class="text-sm font-medium text-foreground hover:text-primary-strong" href="#nosotros">Nosotros</a>
-          <a class="text-sm font-medium text-foreground hover:text-primary-strong" href="#valores">Valores</a>
-          <a class="text-sm font-medium text-foreground hover:text-primary-strong" href="#productos">Productos</a>
-          <a class="text-sm font-medium text-foreground hover:text-primary-strong" href="#contacto">Contacto</a>
+          <a class="nav-link text-sm font-medium text-foreground hover:text-primary-strong" href="#nosotros" data-section="nosotros">Nosotros</a>
+          <a class="nav-link text-sm font-medium text-foreground hover:text-primary-strong" href="#valores" data-section="valores">Valores</a>
+          <a class="nav-link text-sm font-medium text-foreground hover:text-primary-strong" href="#productos" data-section="productos">Productos</a>
+          <a class="nav-link text-sm font-medium text-foreground hover:text-primary-strong" href="#contacto" data-section="contacto">Contacto</a>
           <a href="#contacto" class="btn-primary text-sm">Contáctanos</a>
         </nav>
 
@@ -170,7 +170,9 @@
           </div>
 
           <div data-hero-reveal class="relative mx-auto w-full max-w-sm">
-            <div class="overflow-hidden rounded-3xl border border-border bg-card shadow-lg">
+            <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+            <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+            <div data-parallax class="overflow-hidden rounded-3xl border border-border bg-card shadow-lg">
               <img
                 src="assets/img/hero-chiles.webp"
                 alt="Sazonadores Fresh Harvest de chile chiltepín, habanero y serrano verde sobre una mesa de madera"
@@ -214,11 +216,11 @@
 
             <dl data-reveal class="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-6">
               <div>
-                <dt class="font-display text-3xl font-semibold text-primary">+50</dt>
+                <dt class="font-display text-3xl font-semibold text-primary" data-counter data-count-to="50" data-prefix="+">0</dt>
                 <dd class="text-sm text-muted-foreground">Años de experiencia agrícola</dd>
               </div>
               <div>
-                <dt class="font-display text-3xl font-semibold text-primary">4.6</dt>
+                <dt class="font-display text-3xl font-semibold text-primary" data-counter data-count-to="4.6" data-decimals="1">0</dt>
                 <dd class="text-sm text-muted-foreground">Calificación de nuestra comunidad en Google</dd>
               </div>
             </dl>
@@ -242,8 +244,8 @@
       <section aria-label="Misión y visión" class="bg-card border-y border-border">
         <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
           <div class="grid gap-6 sm:grid-cols-2">
-            <div data-reveal class="card p-8">
-              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+            <div data-reveal class="group card p-8">
+              <span class="icon-badge flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
                 <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-sparkle" /></svg>
               </span>
               <h3 class="mt-5 font-display text-xl font-semibold">Misión</h3>
@@ -252,8 +254,8 @@
                 desarrollo de nuestra gente.
               </p>
             </div>
-            <div data-reveal class="card p-8">
-              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+            <div data-reveal class="group card p-8">
+              <span class="icon-badge flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
                 <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-globe" /></svg>
               </span>
               <h3 class="mt-5 font-display text-xl font-semibold">Visión</h3>
@@ -273,8 +275,8 @@
         </div>
 
         <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-          <div data-reveal class="card p-6 text-center">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+          <div data-reveal class="group card p-6 text-center">
+            <span class="icon-badge mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
               <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-sparkle" /></svg>
             </span>
             <h3 class="mt-4 font-display text-base font-semibold">Innovación</h3>
@@ -282,8 +284,8 @@
               Pasión por la disrupción que genera valor, rompiendo paradigmas de manera emprendedora.
             </p>
           </div>
-          <div data-reveal class="card p-6 text-center">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+          <div data-reveal class="group card p-6 text-center">
+            <span class="icon-badge mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
               <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-shield" /></svg>
             </span>
             <h3 class="mt-4 font-display text-base font-semibold">Integridad</h3>
@@ -291,8 +293,8 @@
               Actuamos con honestidad y honor, sin comprometer la verdad.
             </p>
           </div>
-          <div data-reveal class="card p-6 text-center">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+          <div data-reveal class="group card p-6 text-center">
+            <span class="icon-badge mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
               <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-users" /></svg>
             </span>
             <h3 class="mt-4 font-display text-base font-semibold">Colaboración</h3>
@@ -300,8 +302,8 @@
               Trabajo en equipo multidisciplinario, anteponiendo el éxito colectivo.
             </p>
           </div>
-          <div data-reveal class="card p-6 text-center">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+          <div data-reveal class="group card p-6 text-center">
+            <span class="icon-badge mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
               <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-heart" /></svg>
             </span>
             <h3 class="mt-4 font-display text-base font-semibold">Orientación al cliente</h3>
@@ -309,8 +311,8 @@
               Priorizamos las necesidades y satisfacción de nuestros clientes en cada decisión.
             </p>
           </div>
-          <div data-reveal class="card p-6 text-center">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+          <div data-reveal class="group card p-6 text-center">
+            <span class="icon-badge mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
               <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-medal" /></svg>
             </span>
             <h3 class="mt-4 font-display text-base font-semibold">Calidad</h3>
@@ -334,68 +336,120 @@
           </div>
 
           <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <article data-reveal class="card overflow-hidden">
-              <div class="aspect-[3/5] overflow-hidden bg-card">
+            <article data-reveal class="card product-card overflow-hidden">
+              <button
+                type="button"
+                class="relative block aspect-[3/5] w-full overflow-hidden bg-card cursor-pointer"
+                data-lightbox-trigger
+                data-lightbox-src="assets/img/hero-chiles.webp"
+                data-lightbox-alt="Sazonadores de chile chiltepín, habanero y serrano verde Fresh Harvest"
+                aria-label="Ver imagen ampliada: Sazonadores de chile molido"
+              >
                 <img
                   src="assets/img/hero-chiles.webp"
                   alt="Sazonadores de chile chiltepín, habanero y serrano verde Fresh Harvest"
                   width="680"
                   height="1020"
                   loading="lazy"
-                  class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  class="h-full w-full object-cover"
                 />
-              </div>
+                <span class="product-card-overlay absolute inset-0 flex items-end p-4">
+                  <span class="product-card-hint inline-flex items-center gap-1 text-sm font-medium text-white">
+                    <svg class="h-4 w-4" aria-hidden="true"><use href="#icon-arrow-right" /></svg>
+                    Ver imagen
+                  </span>
+                </span>
+              </button>
               <div class="p-5">
                 <h3 class="font-display text-base font-semibold">Sazonadores de chile molido</h3>
                 <p class="mt-1 text-sm text-muted-foreground">Chiltepín, habanero y serrano verde.</p>
               </div>
             </article>
 
-            <article data-reveal class="card overflow-hidden">
-              <div class="aspect-[3/5] overflow-hidden bg-card">
+            <article data-reveal class="card product-card overflow-hidden">
+              <button
+                type="button"
+                class="relative block aspect-[3/5] w-full overflow-hidden bg-card cursor-pointer"
+                data-lightbox-trigger
+                data-lightbox-src="assets/img/bufalo-duo.png"
+                data-lightbox-alt="Botellas de salsa Búfalo Fresh Harvest sobre una barra de cocina"
+                aria-label="Ver imagen ampliada: Salsa Búfalo"
+              >
                 <img
                   src="assets/img/bufalo-duo.png"
                   alt="Botellas de salsa Búfalo Fresh Harvest sobre una barra de cocina"
                   width="141"
                   height="235"
                   loading="lazy"
-                  class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  class="h-full w-full object-cover"
                 />
-              </div>
+                <span class="product-card-overlay absolute inset-0 flex items-end p-4">
+                  <span class="product-card-hint inline-flex items-center gap-1 text-sm font-medium text-white">
+                    <svg class="h-4 w-4" aria-hidden="true"><use href="#icon-arrow-right" /></svg>
+                    Ver imagen
+                  </span>
+                </span>
+              </button>
               <div class="p-5">
                 <h3 class="font-display text-base font-semibold">Salsa Búfalo</h3>
                 <p class="mt-1 text-sm text-muted-foreground">Para acompañar tus preparaciones favoritas.</p>
               </div>
             </article>
 
-            <article data-reveal class="card overflow-hidden">
-              <div class="aspect-[3/5] overflow-hidden bg-card">
+            <article data-reveal class="card product-card overflow-hidden">
+              <button
+                type="button"
+                class="relative block aspect-[3/5] w-full overflow-hidden bg-card cursor-pointer"
+                data-lightbox-trigger
+                data-lightbox-src="assets/img/salsa-noodles.png"
+                data-lightbox-alt="Salsa Fresh Harvest sobre un platillo de noodles con limón"
+                aria-label="Ver imagen ampliada: Salsas versátiles"
+              >
                 <img
                   src="assets/img/salsa-noodles.png"
                   alt="Salsa Fresh Harvest sobre un platillo de noodles con limón"
                   width="141"
                   height="235"
                   loading="lazy"
-                  class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  class="h-full w-full object-cover"
                 />
-              </div>
+                <span class="product-card-overlay absolute inset-0 flex items-end p-4">
+                  <span class="product-card-hint inline-flex items-center gap-1 text-sm font-medium text-white">
+                    <svg class="h-4 w-4" aria-hidden="true"><use href="#icon-arrow-right" /></svg>
+                    Ver imagen
+                  </span>
+                </span>
+              </button>
               <div class="p-5">
                 <h3 class="font-display text-base font-semibold">Salsas versátiles</h3>
                 <p class="mt-1 text-sm text-muted-foreground">Del picante clásico a preparaciones internacionales.</p>
               </div>
             </article>
 
-            <article data-reveal class="card overflow-hidden">
-              <div class="aspect-[3/5] overflow-hidden bg-card">
+            <article data-reveal class="card product-card overflow-hidden">
+              <button
+                type="button"
+                class="relative block aspect-[3/5] w-full overflow-hidden bg-card cursor-pointer"
+                data-lightbox-trigger
+                data-lightbox-src="assets/img/salsa-duo.png"
+                data-lightbox-alt="Dos presentaciones de salsa picante Fresh Harvest"
+                aria-label="Ver imagen ampliada: Línea de salsas"
+              >
                 <img
                   src="assets/img/salsa-duo.png"
                   alt="Dos presentaciones de salsa picante Fresh Harvest"
                   width="141"
                   height="235"
                   loading="lazy"
-                  class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  class="h-full w-full object-cover"
                 />
-              </div>
+                <span class="product-card-overlay absolute inset-0 flex items-end p-4">
+                  <span class="product-card-hint inline-flex items-center gap-1 text-sm font-medium text-white">
+                    <svg class="h-4 w-4" aria-hidden="true"><use href="#icon-arrow-right" /></svg>
+                    Ver imagen
+                  </span>
+                </span>
+              </button>
               <div class="p-5">
                 <h3 class="font-display text-base font-semibold">Línea de salsas</h3>
                 <p class="mt-1 text-sm text-muted-foreground">Distintas intensidades para cada paladar.</p>
@@ -413,8 +467,8 @@
         </div>
 
         <div class="mt-12 grid gap-6 sm:grid-cols-3">
-          <div data-reveal class="text-center">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+          <div data-reveal class="group text-center">
+            <span class="icon-badge mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
               <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-handshake" /></svg>
             </span>
             <h3 class="mt-4 font-display text-base font-semibold">Alianzas estratégicas</h3>
@@ -422,8 +476,8 @@
               Trabajamos junto a productores y socios estratégicos para fortalecer cada etapa de la cadena agrícola.
             </p>
           </div>
-          <div data-reveal class="text-center">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+          <div data-reveal class="group text-center">
+            <span class="icon-badge mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
               <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-leaf" /></svg>
             </span>
             <h3 class="mt-4 font-display text-base font-semibold">Procesos responsables</h3>
@@ -431,8 +485,8 @@
               Cuidamos cada proceso pensando en el bienestar de nuestros colaboradores y comunidades agrícolas.
             </p>
           </div>
-          <div data-reveal class="text-center">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+          <div data-reveal class="group text-center">
+            <span class="icon-badge mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
               <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-certificate" /></svg>
             </span>
             <h3 class="mt-4 font-display text-base font-semibold">Calidad respaldada</h3>
@@ -554,6 +608,19 @@
         </div>
       </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-50 flex items-center justify-center p-6" role="dialog" aria-modal="true" aria-label="Imagen ampliada" aria-hidden="true">
+      <button
+        type="button"
+        id="lightbox-close"
+        class="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
+        aria-label="Cerrar imagen ampliada"
+      >
+        <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-close" /></svg>
+      </button>
+      <img id="lightbox-image" src="" alt="" class="max-h-[85vh] max-w-full rounded-2xl object-contain shadow-2xl" />
+    </div>
 
     <script type="module" src="dist/script.js"></script>
   </body>
