@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fresh Harvest | Agroalimentos con tradición del campo mexicano</title>
+    <meta
+      name="description"
+      content="Fresh Harvest elabora sazonadores de chile molido y salsas artesanales a partir de más de 50 años de experiencia agrícola, combinando tradición, innovación y sustentabilidad."
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23EA580C'/%3E%3Cpath d='M7 15c0-5 4-8 10-8-1 6-4 9-10 8Z' fill='%23fff'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/styles.css" />
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <a
+      href="#contenido"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-primary focus:text-on-primary focus:px-5 focus:py-3"
+    >
+      Saltar al contenido principal
+    </a>
+
+    <!-- Icon sprite (custom line icons, consistent 1.5px stroke) -->
+    <svg width="0" height="0" class="hidden" aria-hidden="true">
+      <defs>
+        <symbol id="icon-leaf" viewBox="0 0 24 24">
+          <path d="M6 15C6 8 11 4 19 4c0 8-4 13-11 13-2 0-2-1-2-2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5 20c1.5-4 4-6.5 8-8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-menu" viewBox="0 0 24 24">
+          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 24 24">
+          <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-sparkle" viewBox="0 0 24 24">
+          <path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6L12 3Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+          <path d="M12 4l7 3v5c0 4.5-3 7.5-7 8-4-.5-7-3.5-7-8V7l7-3Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-users" viewBox="0 0 24 24">
+          <circle cx="9" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M3.5 19c.7-3 2.8-5 5.5-5s4.8 2 5.5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="17" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M15.5 19c.4-2.2 1.7-3.8 3.5-4.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-heart" viewBox="0 0 24 24">
+          <path d="M12 19s-7-4.4-7-9.5C5 6.5 7 5 9.2 5c1.2 0 2.2.6 2.8 1.6C12.6 5.6 13.6 5 14.8 5 17 5 19 6.5 19 9.5 19 14.6 12 19 12 19Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-medal" viewBox="0 0 24 24">
+          <circle cx="12" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M9.5 9.5L7 4M14.5 9.5L17 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M10.5 14l1 1 2.2-2.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-handshake" viewBox="0 0 24 24">
+          <path d="M3 11l4-3 4 2 3-2 4 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7 10l4 4 2-2M14 10l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 11v3l3 3M21 11v3l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-certificate" viewBox="0 0 24 24">
+          <circle cx="12" cy="9" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M9 13.5L8 20l4-2 4 2-1-6.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-map-pin" viewBox="0 0 24 24">
+          <path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="12" cy="9.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24">
+          <path d="M6 4h3l1.5 4L8 9.5a11 11 0 0 0 6.5 6.5l1.5-2.5 4 1.5v3c0 1-1 1.7-2 1.5C11 18.5 5.5 13 4.5 6c-.2-1 .5-2 1.5-2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 8v4l3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24">
+          <path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8L12 16.7l-5.2 2.8 1-5.8-4.3-4.1 5.9-.8L12 3.5Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+        </symbol>
+        <symbol id="icon-star-outline" viewBox="0 0 24 24">
+          <path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8L12 16.7l-5.2 2.8 1-5.8-4.3-4.1 5.9-.8L12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+          <path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M4 12h16M12 4c2.5 2.2 2.5 13.8 0 16M12 4c-2.5 2.2-2.5 13.8 0 16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        </symbol>
+      </defs>
+    </svg>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+        <a href="#inicio" class="flex items-center gap-2 font-display text-lg font-semibold text-foreground">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-on-primary">
+            <svg class="h-5 w-5" aria-hidden="true"><use href="#icon-leaf" /></svg>
+          </span>
+          Fresh Harvest
+        </a>
+
+        <nav aria-label="Navegación principal" class="hidden items-center gap-8 md:flex">
+          <a class="text-sm font-medium text-foreground hover:text-primary-strong" href="#nosotros">Nosotros</a>
+          <a class="text-sm font-medium text-foreground hover:text-primary-strong" href="#valores">Valores</a>
+          <a class="text-sm font-medium text-foreground hover:text-primary-strong" href="#productos">Productos</a>
+          <a class="text-sm font-medium text-foreground hover:text-primary-strong" href="#contacto">Contacto</a>
+          <a href="#contacto" class="btn-primary text-sm">Contáctanos</a>
+        </nav>
+
+        <button
+          id="nav-toggle"
+          type="button"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-border text-foreground md:hidden"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Abrir menú de navegación"
+        >
+          <svg id="nav-toggle-icon" class="h-6 w-6" aria-hidden="true"><use href="#icon-menu" /></svg>
+        </button>
+      </div>
+
+      <nav
+        id="nav-menu"
+        aria-label="Navegación móvil"
+        class="hidden flex-col gap-1 border-t border-border bg-background px-5 py-3 md:hidden"
+      >
+        <a class="rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-muted" href="#nosotros">Nosotros</a>
+        <a class="rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-muted" href="#valores">Valores</a>
+        <a class="rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-muted" href="#productos">Productos</a>
+        <a class="rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-muted" href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <!-- Hero -->
+      <section id="inicio" class="mx-auto max-w-6xl px-5 pb-16 pt-12 sm:px-8 sm:pb-24 sm:pt-16">
+        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+          <div>
+            <p data-hero-reveal class="section-eyebrow">Agroalimentos mexicanos</p>
+            <h1 data-hero-reveal class="mt-3 font-display text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
+              Más de 50 años de experiencia agrícola, hoy en cada frasco
+            </h1>
+            <p data-hero-reveal class="mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">
+              En Fresh Harvest transformamos generaciones de trabajo en el campo mexicano en sazonadores de chile
+              molido y salsas artesanales, con procesos responsables en cada etapa de producción.
+            </p>
+            <div data-hero-reveal class="mt-8 flex flex-wrap items-center gap-4">
+              <a href="#productos" class="btn-primary">
+                Conoce nuestros productos
+                <svg class="h-4 w-4" aria-hidden="true"><use href="#icon-arrow-right" /></svg>
+              </a>
+              <a href="#contacto" class="btn-outline">Contáctanos</a>
+            </div>
+            <div data-hero-reveal class="mt-8 flex items-center gap-2 text-sm text-muted-foreground">
+              <span class="flex text-primary" role="img" aria-label="Calificación de 4.6 sobre 5 estrellas">
+                <svg class="h-4 w-4"><use href="#icon-star" /></svg>
+                <svg class="h-4 w-4"><use href="#icon-star" /></svg>
+                <svg class="h-4 w-4"><use href="#icon-star" /></svg>
+                <svg class="h-4 w-4"><use href="#icon-star" /></svg>
+                <svg class="h-4 w-4"><use href="#icon-star-outline" /></svg>
+              </span>
+              <span>4.6 en Google · 16 opiniones</span>
+            </div>
+          </div>
+
+          <div data-hero-reveal class="relative mx-auto w-full max-w-sm">
+            <div class="overflow-hidden rounded-3xl border border-border bg-card shadow-lg">
+              <img
+                src="assets/img/hero-chiles.webp"
+                alt="Sazonadores Fresh Harvest de chile chiltepín, habanero y serrano verde sobre una mesa de madera"
+                width="680"
+                height="1020"
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission quote strip -->
+      <section aria-label="Nuestra misión" class="border-y border-border bg-muted">
+        <div data-reveal class="mx-auto max-w-4xl px-5 py-12 text-center sm:px-8">
+          <p class="font-display text-xl font-medium leading-relaxed text-foreground sm:text-2xl">
+            &ldquo;Generar valor de la producción, entregando alimentos de calidad internacional, contribuyendo al
+            desarrollo de nuestra gente.&rdquo;
+          </p>
+          <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-primary-strong">Misión Fresh Harvest</p>
+        </div>
+      </section>
+
+      <!-- Historia -->
+      <section id="nosotros" class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+          <div class="order-2 md:order-1">
+            <p data-reveal class="section-eyebrow">Nuestra historia</p>
+            <h2 data-reveal class="section-title mt-3">Tradición, innovación y sustentabilidad</h2>
+            <p data-reveal class="mt-5 leading-relaxed text-muted-foreground">
+              Agroalimentos Fresh Harvest nace en México con la visión de transformar más de 50 años de experiencia
+              agrícola en productos innovadores de valor agregado. Inspirados por el legado del Ing. Jesús Humberto
+              Castro, combinamos tradición, innovación y sustentabilidad para desarrollar alimentos que reflejan la
+              riqueza del campo mexicano.
+            </p>
+            <p data-reveal class="mt-4 leading-relaxed text-muted-foreground">
+              A través de alianzas estratégicas, procesos responsables y certificaciones que respaldan nuestra
+              calidad, trabajamos para llevar nuestros productos a las mesas y cocinas de México, impulsando el
+              desarrollo sostenible del sector agrícola.
+            </p>
+
+            <dl data-reveal class="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-6">
+              <div>
+                <dt class="font-display text-3xl font-semibold text-primary">+50</dt>
+                <dd class="text-sm text-muted-foreground">Años de experiencia agrícola</dd>
+              </div>
+              <div>
+                <dt class="font-display text-3xl font-semibold text-primary">4.6</dt>
+                <dd class="text-sm text-muted-foreground">Calificación de nuestra comunidad en Google</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="order-1 md:order-2">
+            <div data-reveal class="overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
+              <img
+                src="assets/img/salsa-tostadas.png"
+                alt="Salsa Fresh Harvest acompañando tostadas preparadas para compartir"
+                width="141"
+                height="235"
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Misión y Visión -->
+      <section aria-label="Misión y visión" class="bg-card border-y border-border">
+        <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div data-reveal class="card p-8">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+                <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-sparkle" /></svg>
+              </span>
+              <h3 class="mt-5 font-display text-xl font-semibold">Misión</h3>
+              <p class="mt-2 leading-relaxed text-muted-foreground">
+                Generar valor de la producción, entregando alimentos de calidad internacional, contribuyendo al
+                desarrollo de nuestra gente.
+              </p>
+            </div>
+            <div data-reveal class="card p-8">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+                <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-globe" /></svg>
+              </span>
+              <h3 class="mt-5 font-display text-xl font-semibold">Visión</h3>
+              <p class="mt-2 leading-relaxed text-muted-foreground">
+                Que nuestros productos se consuman en todas las mesas y cocinas de México.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Valores -->
+      <section id="valores" class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="section-eyebrow">Lo que nos guía</p>
+          <h2 class="section-title mt-3">Nuestros valores</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <div data-reveal class="card p-6 text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+              <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-sparkle" /></svg>
+            </span>
+            <h3 class="mt-4 font-display text-base font-semibold">Innovación</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Pasión por la disrupción que genera valor, rompiendo paradigmas de manera emprendedora.
+            </p>
+          </div>
+          <div data-reveal class="card p-6 text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+              <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-shield" /></svg>
+            </span>
+            <h3 class="mt-4 font-display text-base font-semibold">Integridad</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Actuamos con honestidad y honor, sin comprometer la verdad.
+            </p>
+          </div>
+          <div data-reveal class="card p-6 text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+              <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-users" /></svg>
+            </span>
+            <h3 class="mt-4 font-display text-base font-semibold">Colaboración</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Trabajo en equipo multidisciplinario, anteponiendo el éxito colectivo.
+            </p>
+          </div>
+          <div data-reveal class="card p-6 text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+              <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-heart" /></svg>
+            </span>
+            <h3 class="mt-4 font-display text-base font-semibold">Orientación al cliente</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Priorizamos las necesidades y satisfacción de nuestros clientes en cada decisión.
+            </p>
+          </div>
+          <div data-reveal class="card p-6 text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+              <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-medal" /></svg>
+            </span>
+            <h3 class="mt-4 font-display text-base font-semibold">Calidad</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Compromiso con la excelencia y la mejora continua de nuestros procesos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Productos -->
+      <section id="productos" class="border-y border-border bg-muted">
+        <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+          <div class="mx-auto max-w-2xl text-center">
+            <p class="section-eyebrow">Catálogo</p>
+            <h2 class="section-title mt-3">Nuestros productos</h2>
+            <p class="mt-4 leading-relaxed text-muted-foreground">
+              Sazonadores de chile molido y salsas artesanales, elaborados a partir de materia prima seleccionada
+              del campo mexicano.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article data-reveal class="card overflow-hidden">
+              <div class="aspect-[3/5] overflow-hidden bg-card">
+                <img
+                  src="assets/img/hero-chiles.webp"
+                  alt="Sazonadores de chile chiltepín, habanero y serrano verde Fresh Harvest"
+                  width="680"
+                  height="1020"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-base font-semibold">Sazonadores de chile molido</h3>
+                <p class="mt-1 text-sm text-muted-foreground">Chiltepín, habanero y serrano verde.</p>
+              </div>
+            </article>
+
+            <article data-reveal class="card overflow-hidden">
+              <div class="aspect-[3/5] overflow-hidden bg-card">
+                <img
+                  src="assets/img/bufalo-duo.png"
+                  alt="Botellas de salsa Búfalo Fresh Harvest sobre una barra de cocina"
+                  width="141"
+                  height="235"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-base font-semibold">Salsa Búfalo</h3>
+                <p class="mt-1 text-sm text-muted-foreground">Para acompañar tus preparaciones favoritas.</p>
+              </div>
+            </article>
+
+            <article data-reveal class="card overflow-hidden">
+              <div class="aspect-[3/5] overflow-hidden bg-card">
+                <img
+                  src="assets/img/salsa-noodles.png"
+                  alt="Salsa Fresh Harvest sobre un platillo de noodles con limón"
+                  width="141"
+                  height="235"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-base font-semibold">Salsas versátiles</h3>
+                <p class="mt-1 text-sm text-muted-foreground">Del picante clásico a preparaciones internacionales.</p>
+              </div>
+            </article>
+
+            <article data-reveal class="card overflow-hidden">
+              <div class="aspect-[3/5] overflow-hidden bg-card">
+                <img
+                  src="assets/img/salsa-duo.png"
+                  alt="Dos presentaciones de salsa picante Fresh Harvest"
+                  width="141"
+                  height="235"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-base font-semibold">Línea de salsas</h3>
+                <p class="mt-1 text-sm text-muted-foreground">Distintas intensidades para cada paladar.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compromiso -->
+      <section aria-label="Compromiso con la calidad" class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="section-eyebrow">Cómo trabajamos</p>
+          <h2 class="section-title mt-3">Compromiso con la calidad</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-3">
+          <div data-reveal class="text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+              <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-handshake" /></svg>
+            </span>
+            <h3 class="mt-4 font-display text-base font-semibold">Alianzas estratégicas</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Trabajamos junto a productores y socios estratégicos para fortalecer cada etapa de la cadena agrícola.
+            </p>
+          </div>
+          <div data-reveal class="text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+              <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-leaf" /></svg>
+            </span>
+            <h3 class="mt-4 font-display text-base font-semibold">Procesos responsables</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Cuidamos cada proceso pensando en el bienestar de nuestros colaboradores y comunidades agrícolas.
+            </p>
+          </div>
+          <div data-reveal class="text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary">
+              <svg class="h-6 w-6" aria-hidden="true"><use href="#icon-certificate" /></svg>
+            </span>
+            <h3 class="mt-4 font-display text-base font-semibold">Calidad respaldada</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Orientamos nuestros procesos a certificaciones que respaldan una calidad de nivel internacional.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contacto" class="border-t border-border bg-card">
+        <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+          <div class="grid gap-10 md:grid-cols-2 md:gap-14">
+            <div>
+              <p data-reveal class="section-eyebrow">Contacto</p>
+              <h2 data-reveal class="section-title mt-3">Visítanos o escríbenos</h2>
+              <p data-reveal class="mt-4 leading-relaxed text-muted-foreground">
+                Proveedor mayorista de alimentos en Costa Rica, Sinaloa. Contáctanos para conocer más sobre nuestros
+                productos.
+              </p>
+
+              <ul class="mt-8 space-y-5">
+                <li data-reveal class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-muted text-primary">
+                    <svg class="h-5 w-5" aria-hidden="true"><use href="#icon-map-pin" /></svg>
+                  </span>
+                  <div>
+                    <p class="font-medium text-foreground">Costa Rica 5112 Pte, 80430 Costa Rica, Sinaloa, México</p>
+                    <a
+                      class="mt-1 inline-flex items-center gap-1 text-sm font-medium text-primary-strong hover:underline"
+                      href="https://www.google.com/maps/dir/?api=1&destination=Costa+Rica+5112+Pte%2C+80430+Costa+Rica%2C+Sinaloa%2C+Mexico"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cómo llegar
+                      <svg class="h-3.5 w-3.5" aria-hidden="true"><use href="#icon-arrow-right" /></svg>
+                    </a>
+                  </div>
+                </li>
+                <li data-reveal class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-muted text-primary">
+                    <svg class="h-5 w-5" aria-hidden="true"><use href="#icon-phone" /></svg>
+                  </span>
+                  <div>
+                    <a class="font-medium text-foreground hover:text-primary-strong" href="tel:+526673944987">667 394 4987</a>
+                  </div>
+                </li>
+                <li data-reveal class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-muted text-primary">
+                    <svg class="h-5 w-5" aria-hidden="true"><use href="#icon-clock" /></svg>
+                  </span>
+                  <div>
+                    <p class="font-medium text-foreground">Lunes desde las 8:00 a.m.</p>
+                    <p class="text-sm text-muted-foreground">Llámanos para conocer el resto del horario de atención.</p>
+                  </div>
+                </li>
+                <li data-reveal class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-muted text-primary">
+                    <svg class="h-5 w-5" aria-hidden="true"><use href="#icon-globe" /></svg>
+                  </span>
+                  <div>
+                    <a
+                      class="font-medium text-foreground hover:text-primary-strong"
+                      href="https://maspicanteporfavor.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      maspicanteporfavor.com
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div data-reveal class="overflow-hidden rounded-3xl border border-border shadow-sm">
+              <iframe
+                title="Ubicación de Fresh Harvest en el mapa"
+                src="https://www.google.com/maps?q=Costa+Rica+5112+Pte%2C+80430+Costa+Rica%2C+Sinaloa%2C+Mexico&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0; min-height: 320px"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-foreground text-background">
+      <div class="mx-auto max-w-6xl px-5 py-12 sm:px-8">
+        <div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <div class="flex items-center gap-2 font-display text-lg font-semibold">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-on-primary">
+                <svg class="h-5 w-5" aria-hidden="true"><use href="#icon-leaf" /></svg>
+              </span>
+              Fresh Harvest
+            </div>
+            <p class="mt-3 max-w-xs text-sm text-background/70">
+              Generamos valor de la producción del campo mexicano, entregando alimentos de calidad internacional.
+            </p>
+          </div>
+
+          <nav aria-label="Enlaces del pie de página" class="flex flex-wrap gap-x-8 gap-y-2 text-sm">
+            <a class="text-background/80 hover:text-background" href="#nosotros">Nosotros</a>
+            <a class="text-background/80 hover:text-background" href="#valores">Valores</a>
+            <a class="text-background/80 hover:text-background" href="#productos">Productos</a>
+            <a class="text-background/80 hover:text-background" href="#contacto">Contacto</a>
+          </nav>
+        </div>
+
+        <div class="mt-10 flex flex-col gap-2 border-t border-background/15 pt-6 text-sm text-background/60 sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; <span id="year">2026</span> Fresh Harvest. Todos los derechos reservados.</p>
+          <p>Costa Rica 5112 Pte, Costa Rica, Sinaloa, México · 667 394 4987</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="dist/script.js"></script>
+  </body>
+</html>

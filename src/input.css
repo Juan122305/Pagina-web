@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #ea580c;
+  --color-on-primary: #000000;
+  /* Darker than --color-primary: EA580C only clears AA at 3:1 (large text/icons), not 4.5:1 body text */
+  --color-primary-strong: #c2410c;
+  --color-secondary: #f97316;
+  --color-on-secondary: #000000;
+  --color-accent: #2563eb;
+  --color-on-accent: #ffffff;
+  --color-background: #fff7ed;
+  --color-foreground: #0f172a;
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
+  --color-muted: #fdf4f0;
+  --color-muted-foreground: #475569;
+  --color-border: #f0d8c9;
+  --color-ring: #ea580c;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-medium transition-colors duration-200 cursor-pointer bg-primary text-on-primary hover:bg-secondary;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-medium transition-colors duration-200 cursor-pointer border-2 border-primary text-primary-strong hover:bg-primary hover:text-on-primary;
+  }
+
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl font-semibold tracking-tight text-foreground;
+  }
+
+  .section-eyebrow {
+    @apply inline-block text-sm font-semibold uppercase tracking-wide text-primary-strong;
+  }
+
+  .card {
+    @apply rounded-2xl bg-card text-card-foreground border border-border shadow-sm;
+  }
+
+  [data-reveal] {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  [data-reveal].reveal-pending {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      transition: none;
+    }
+  }
+}
