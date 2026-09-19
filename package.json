@@ -1,5 +1,18 @@
 {
+  "name": "fresh-harvest-web",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o dist/styles.css --minify",
+    "build:js": "esbuild src/script.js --bundle --minify --format=esm --outfile=dist/script.js",
+    "build": "npm run build:css && npm run build:js",
+    "dev": "tailwindcss -i src/input.css -o dist/styles.css --watch"
+  },
   "dependencies": {
     "motion": "^13.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "esbuild": "^0.28.2",
+    "tailwindcss": "^4.3.3"
   }
 }
